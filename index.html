@@ -28,6 +28,8 @@
       background-color: var(--main-color);
       overflow-x: hidden;
       width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     .navbar {
@@ -148,14 +150,14 @@
 
     .menüburda {
       width: 100%;
-      padding: 40px 0;
+      padding: 20px 0;
     }
 
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
+      gap: 15px;
+      padding: 0 15px;
       max-width: 1200px;  
       margin: 0 auto;
       width: 100%;
@@ -254,53 +256,58 @@
     /* Mobil uyumluluk - Büyük telefonlar */
     @media (max-width: 768px) {
       .navbar {
-        padding: 10px 15px;
-        margin: 10px;
+        padding: 8px 12px;
+        margin: 8px;
         border-radius: 20px;
-        width: calc(100% - 20px);
+        width: calc(100% - 16px);
       }
 
       .navlinks {
-        gap: 8px;
+        gap: 6px;
       }
 
       .navlinks .container {
-        font-size: 12px;
-        padding: 4px 6px;
+        font-size: 11px;
+        padding: 3px 5px;
       }
 
       .logo img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
       }
 
       .icons img {
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
       }
 
       .hero {
-        margin-top: -80px;
-        padding: 0 15px;
+        margin-top: -70px;
+        padding: 0 10px;
+      }
+
+      .menüburda {
+        padding: 15px 0;
       }
 
       .menu-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 15px;
+        gap: 10px;
+        padding: 0 10px;
       }
 
       .menu-grid img {
-        height: 220px;
+        height: 200px;
       }
 
       .fiyat {
-        font-size: 16px;
-        padding: 6px;
+        font-size: 14px;
+        padding: 5px;
+        margin: 5px 0;
       }
 
       .footer {
-        padding: 25px 15px;
+        padding: 20px 10px;
       }
     }
 
@@ -308,14 +315,16 @@
     @media (max-width: 480px) {
       body {
         width: 100vw;
+        margin: 0;
+        padding: 0;
       }
 
       .navbar {
         flex-direction: column;
-        gap: 8px;
-        padding: 12px;
-        margin: 8px;
-        width: calc(100% - 16px);
+        gap: 5px;
+        padding: 8px;
+        margin: 5px;
+        width: calc(100% - 10px);
         border-radius: 15px;
       }
 
@@ -326,81 +335,81 @@
 
       .navlinks {
         justify-content: center;
-        gap: 4px;
+        gap: 3px;
         width: 100%;
         flex-wrap: wrap;
       }
 
       .navlinks .container {
-        font-size: 10px;
-        padding: 3px 5px;
+        font-size: 9px;
+        padding: 2px 4px;
       }
 
       .logo img {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
       }
 
       .icons {
-        gap: 10px;
+        gap: 8px;
       }
 
       .icons img {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
       }
 
       .hero {
-        margin-top: -60px;
-        padding: 0 10px;
-        min-height: 90vh;
+        margin-top: -50px;
+        padding: 0 5px;
+        min-height: 85vh;
       }
 
       .hero-text {
-        padding: 15px;
+        padding: 10px;
       }
 
       .hero-text h1 {
-        font-size: 22px;
-        margin-bottom: 12px;
+        font-size: 20px;
+        margin-bottom: 10px;
       }
 
       .hero-text p {
-        font-size: 14px;
-        margin-bottom: 15px;
+        font-size: 13px;
+        margin-bottom: 12px;
       }
 
       .hero-btn {
-        padding: 10px 25px;
-        font-size: 13px;
+        padding: 8px 20px;
+        font-size: 12px;
       }
 
       .menüburda {
-        padding: 20px 0;
+        padding: 10px 0;
       }
 
       .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 0 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 5px;
       }
 
       .menu-grid img {
-        height: 250px;
+        height: 180px;
       }
 
       .fiyat {
-        font-size: 16px;
-        padding: 8px;
-        margin: 8px 0;
+        font-size: 13px;
+        padding: 6px;
+        margin: 5px 0;
       }
 
       .footer {
-        padding: 20px 10px;
+        padding: 15px 5px;
       }
 
       .footer .icons {
-        gap: 15px;
+        gap: 12px;
       }
     }
 
