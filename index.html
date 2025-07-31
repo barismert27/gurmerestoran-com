@@ -1,11 +1,8 @@
-:root {
-      --main-color: #C5172E;
-      --black-color: black;
-    }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gurme Restoran</title>
   <link rel="website icon" type="png" href="fotoğraflar/Brown Flat Illustrative Chef Restaurant Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
@@ -20,38 +17,32 @@
 
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden;
-      width: 100%;
+    }
+
+    :root {
+      --main-color: #C5172E;
+      --black-color: black;
     }
 
     body {
       background-color: var(--main-color);
       overflow-x: hidden;
       width: 100%;
-      position: relative;
-      min-width: 320px;
-    }
-
-    /* Container wrapper */
-    .page-wrapper {
-      width: 100%;
-      overflow-x: hidden;
-      position: relative;
     }
 
     .navbar {
-      background-color: white !important;
+      background-color: white;
       font-family: 'Poppins', sans-serif;
       display: flex; 
       align-items: center;
       justify-content: space-between; 
-      padding: 10px 15px;
+      padding: 10px 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-radius: 20px;
-      margin: 10px;
-      width: calc(100% - 20px);
+      border-radius: 30px;
+      margin: 15px;
+      width: calc(100% - 30px);
       box-sizing: border-box;
     }
 
@@ -107,8 +98,8 @@
       justify-content: center;
       position: relative;
       z-index: 1;
-      margin-top: -80px;
-      padding: 0 15px;
+      margin-top: -100px;
+      padding: 0 20px;
       width: 100%;
     }
 
@@ -155,14 +146,26 @@
       color: white;
     }
 
+    .menüburda {
+      width: 100%;
+      padding: 40px 0;
+    }
+
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 40px 15px;      
+      padding: 0 20px;
       max-width: 1200px;  
       margin: 0 auto;
       width: 100%;
+      box-sizing: border-box;
+    }
+
+    .menu-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .menu-grid img {
@@ -195,6 +198,7 @@
       font-family: 'Poppins', sans-serif;
       padding: 30px 20px;
       text-align: center;
+      width: 100%;
     }
 
     .footer-content {
@@ -238,94 +242,31 @@
       height: 25px;
     }
 
-    /* Hamburger menü stilleri */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 3px;
-    }
-
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background-color: #C5172E;
-      transition: 0.3s;
-    }
-
-    /* Mobil uyumluluk */
-    @media screen and (max-width: 768px) {
-      html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        position: relative;
+    /* Tablet uyumluluk */
+    @media (max-width: 1024px) {
+      .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 0 15px;
       }
+    }
 
+    /* Mobil uyumluluk - Büyük telefonlar */
+    @media (max-width: 768px) {
       .navbar {
-        background-color: white !important;
-        padding: 8px 12px;
-        margin: 8px;
-        border-radius: 15px;
-        width: calc(100% - 16px);
-        position: sticky;
-        top: 0;
+        padding: 10px 15px;
+        margin: 10px;
+        border-radius: 20px;
+        width: calc(100% - 20px);
       }
 
-      .orta {
-        display: none;
+      .navlinks {
+        gap: 8px;
       }
 
-      .hamburger {
-        display: flex;
-      }
-
-      .sağa {
-        display: none;
-      }
-
-      .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white !important;
-        border-radius: 15px;
-        margin-top: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      .mobile-menu.active {
-        display: block;
-      }
-
-      .mobile-menu ul {
-        list-style: none;
-        padding: 20px;
-        margin: 0;
-      }
-
-      .mobile-menu ul li {
-        margin-bottom: 15px;
-      }
-
-      .mobile-menu ul li a {
-        font-family: "Poppins", sans-serif;
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-        display: block;
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-      }
-
-      .mobile-menu ul li a:hover {
-        background-color: #C5172E;
-        color: white;
+      .navlinks .container {
+        font-size: 12px;
+        padding: 4px 6px;
       }
 
       .logo img {
@@ -333,50 +274,29 @@
         height: 40px;
       }
 
+      .icons img {
+        width: 22px;
+        height: 22px;
+      }
+
       .hero {
-        margin-top: -70px;
-        padding: 0 8px;
-        min-height: 85vh;
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .hero-text {
-        background: rgba(0,0,0,0.3);
-        padding: 30px 20px;
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-      }
-
-      .hero-text h1 {
-        font-size: 28px;
-        margin-bottom: 15px;
-      }
-
-      .hero-text p {
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-
-      .hero-btn {
-        font-size: 14px;
-        padding: 12px 25px;
+        margin-top: -80px;
+        padding: 0 15px;
       }
 
       .menu-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        padding: 20px 8px;
-        width: 100%;
+        gap: 15px;
+        padding: 0 15px;
       }
 
       .menu-grid img {
-        height: 180px;
+        height: 220px;
       }
 
       .fiyat {
-        font-size: 15px;
-        padding: 8px;
+        font-size: 16px;
+        padding: 6px;
       }
 
       .footer {
@@ -384,60 +304,142 @@
       }
     }
 
-    @media screen and (max-width: 480px) {
+    /* Mobil uyumluluk - Küçük telefonlar */
+    @media (max-width: 480px) {
+      body {
+        width: 100vw;
+      }
+
       .navbar {
-        background-color: white !important;
-        width: calc(100% - 12px);
-        margin: 6px;
-        padding: 8px 10px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        margin: 8px;
+        width: calc(100% - 16px);
+        border-radius: 15px;
+      }
+
+      .orta {
+        order: -1;
+        width: 100%;
+      }
+
+      .navlinks {
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .navlinks .container {
+        font-size: 10px;
+        padding: 3px 5px;
+      }
+
+      .logo img {
+        width: 35px;
+        height: 35px;
+      }
+
+      .icons {
+        gap: 10px;
+      }
+
+      .icons img {
+        width: 20px;
+        height: 20px;
       }
 
       .hero {
-        width: 100%;
-        padding: 0 6px;
         margin-top: -60px;
+        padding: 0 10px;
+        min-height: 90vh;
       }
 
       .hero-text {
-        padding: 20px 15px;
+        padding: 15px;
       }
 
       .hero-text h1 {
         font-size: 22px;
+        margin-bottom: 12px;
       }
 
       .hero-text p {
-        font-size: 13px;
+        font-size: 14px;
+        margin-bottom: 15px;
       }
 
       .hero-btn {
-        padding: 8px 18px;
-        font-size: 12px;
+        padding: 10px 25px;
+        font-size: 13px;
+      }
+
+      .menüburda {
+        padding: 20px 0;
       }
 
       .menu-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+      }
+
+      .menu-grid img {
+        height: 250px;
+      }
+
+      .fiyat {
+        font-size: 16px;
+        padding: 8px;
+        margin: 8px 0;
+      }
+
+      .footer {
+        padding: 20px 10px;
+      }
+
+      .footer .icons {
+        gap: 15px;
+      }
+    }
+
+    /* Çok küçük ekranlar */
+    @media (max-width: 320px) {
+      .navbar {
+        padding: 8px;
+        margin: 5px;
+        width: calc(100% - 10px);
+      }
+
+      .navlinks .container {
+        font-size: 9px;
+        padding: 2px 4px;
+      }
+
+      .hero {
+        padding: 0 5px;
+      }
+
+      .menu-grid {
+        padding: 0 5px;
         gap: 10px;
-        padding: 15px 6px;
-        width: 100%;
       }
 
       .menu-grid img {
         height: 200px;
-        width: 100%;
       }
 
       .fiyat {
-        font-size: 15px;
-        margin: 8px 0;
+        font-size: 14px;
         padding: 6px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <nav class="navbar">
+
+  <nav class="navbar">
     <div class="logo">
       <img src="fotoğraflar/chef-hat.png" alt="GURME">
     </div>
@@ -456,24 +458,6 @@
       <ul class="icons"> 
         <li><a href="#"><img src="fotoğraflar/sepet.png" alt="SEPET"></a></li>
         <li><a href="#"><img src="fotoğraflar/3 çizgi.png" alt="TREE LİNE"></a></li>
-      </ul>
-    </div>
-
-    <!-- Hamburger menü -->
-    <div class="hamburger" onclick="toggleMobileMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Mobil menü -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#" onclick="closeMobileMenu()">Anasayfa</a></li>
-        <li><a href="#menüburda" onclick="closeMobileMenu()">Menü</a></li>
-        <li><a href="galeri.html" onclick="closeMobileMenu()">Galeri</a></li>
-        <li><a href="rezervasyon.html" onclick="closeMobileMenu()">Rezervasyon</a></li>
-        <li><a href="#footer1" onclick="closeMobileMenu()">İletişim</a></li>
       </ul>
     </div>
   </nav>
@@ -573,25 +557,7 @@
         </div>
       </div>
     </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('active');
-    }
-
-    function closeMobileMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.remove('active');
-    }
-
-    // Hamburger animasyonu
-    document.querySelector('.hamburger').addEventListener('click', function() {
-      this.classList.toggle('active');
-    });
-  </script>
+  </footer>
 
 </body>
 </html>
