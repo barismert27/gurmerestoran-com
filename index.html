@@ -74,8 +74,8 @@
     }
 
     .logo img {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
     }
 
     .icons {
@@ -260,20 +260,40 @@
         margin: 8px;
         border-radius: 20px;
         width: calc(100% - 16px);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .orta {
+        order: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
       }
 
       .navlinks {
-        gap: 6px;
+        gap: 4px;
+        flex-wrap: nowrap;
       }
 
       .navlinks .container {
-        font-size: 11px;
-        padding: 3px 5px;
+        font-size: 10px;
+        padding: 2px 4px;
+        white-space: nowrap;
       }
 
       .logo img {
         width: 35px;
         height: 35px;
+      }
+
+      .sağa {
+        display: flex;
+      }
+
+      .icons {
+        gap: 6px;
       }
 
       .icons img {
@@ -320,38 +340,46 @@
       }
 
       .navbar {
-        flex-direction: column;
-        gap: 5px;
-        padding: 8px;
+        gap: 0;
+        padding: 6px;
         margin: 5px;
         width: calc(100% - 10px);
         border-radius: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .orta {
-        order: -1;
-        width: 100%;
+        order: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
       }
 
       .navlinks {
         justify-content: center;
-        gap: 3px;
-        width: 100%;
-        flex-wrap: wrap;
+        gap: 2px;
+        flex-wrap: nowrap;
       }
 
       .navlinks .container {
-        font-size: 9px;
-        padding: 2px 4px;
+        font-size: 8px;
+        padding: 2px 3px;
+        white-space: nowrap;
       }
 
       .logo img {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+      }
+
+      .sağa {
+        display: flex;
       }
 
       .icons {
-        gap: 8px;
+        gap: 5px;
       }
 
       .icons img {
@@ -416,32 +444,55 @@
     /* Çok küçük ekranlar */
     @media (max-width: 320px) {
       .navbar {
-        padding: 8px;
-        margin: 5px;
-        width: calc(100% - 10px);
+        padding: 4px;
+        margin: 3px;
+        width: calc(100% - 6px);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .orta {
+        flex: 1;
+        display: flex;
+        justify-content: center;
       }
 
       .navlinks .container {
-        font-size: 9px;
-        padding: 2px 4px;
+        font-size: 7px;
+        padding: 1px 2px;
+        white-space: nowrap;
+      }
+
+      .logo img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .icons {
+        gap: 4px;
+      }
+
+      .icons img {
+        width: 16px;
+        height: 16px;
       }
 
       .hero {
-        padding: 0 5px;
+        padding: 0 3px;
       }
 
       .menu-grid {
-        padding: 0 5px;
-        gap: 10px;
+        padding: 0 3px;
+        gap: 6px;
       }
 
       .menu-grid img {
-        height: 200px;
+        height: 160px;
       }
 
       .fiyat {
-        font-size: 14px;
-        padding: 6px;
+        font-size: 12px;
+        padding: 5px;
       }
     }
   </style>
