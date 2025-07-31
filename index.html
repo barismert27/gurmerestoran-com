@@ -27,10 +27,12 @@
     body {
       background-color: var(--main-color);
       overflow-x: hidden; /* Yatay kaydırmayı engelle */
+      width: 100%;
+      max-width: 100vw;
     }
 
     .navbar {
-      background-color: white;
+      background-color: white !important;
       font-family: 'Poppins', sans-serif;
       display: flex; 
       align-items: center;
@@ -41,7 +43,8 @@
       z-index: 1000;
       border-radius: 30px;
       margin: 15px;
-      max-width: calc(100% - 30px);
+      max-width: calc(100vw - 30px);
+      width: calc(100% - 30px);
       box-sizing: border-box;
     }
 
@@ -227,100 +230,207 @@
       height: 25px;
     }
 
+    /* Hamburger menü stilleri */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 3px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #C5172E;
+      transition: 0.3s;
+    }
+
     /* Mobil uyumluluk */
     @media (max-width: 768px) {
+      body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+
       .navbar {
-        padding: 8px 15px;
+        background-color: white !important;
+        padding: 10px 15px;
         margin: 10px;
         border-radius: 20px;
+        position: relative;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        box-sizing: border-box;
       }
 
-      .navlinks {
-        gap: 8px;
+      .orta {
+        display: none;
       }
 
-      .navlinks .container {
-        font-size: 11px;
-        padding: 3px 6px;
+      .hamburger {
+        display: flex;
+      }
+
+      .sağa {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white !important;
+        border-radius: 15px;
+        margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      .mobile-menu ul {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .mobile-menu ul li {
+        margin-bottom: 15px;
+      }
+
+      .mobile-menu ul li a {
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-menu ul li a:hover {
+        background-color: #C5172E;
+        color: white;
       }
 
       .logo img {
-        width: 35px;
-        height: 35px;
-      }
-
-      .icons img {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
       }
 
       .hero {
-        margin-top: -80px;
-        padding: 0 15px;
+        margin-top: -90px;
+        padding: 0 10px;
+        min-height: 90vh;
+        width: 100vw;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .hero-text {
+        background: rgba(0,0,0,0.3);
+        padding: 30px 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .hero-btn {
+        font-size: 14px;
+        padding: 12px 25px;
       }
 
       .menu-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 20px 15px;
+        padding: 30px 10px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
       }
 
       .menu-grid img {
-        height: 200px;
+        height: 180px;
       }
 
       .fiyat {
-        font-size: 14px;
-        padding: 6px;
+        font-size: 15px;
+        padding: 8px;
       }
 
       .footer {
-        padding: 20px 15px;
+        padding: 25px 15px;
       }
     }
 
     @media (max-width: 480px) {
       .navbar {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
+        background-color: white !important;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
       }
 
-      .orta {
-        order: -1;
-      }
-
-      .navlinks {
-        justify-content: center;
-        gap: 5px;
-      }
-
-      .navlinks .container {
-        font-size: 9px;
-        padding: 2px 4px;
+      .hero {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0 5px;
+        box-sizing: border-box;
+        overflow: hidden;
       }
 
       .hero-text h1 {
-        font-size: 20px;
+        font-size: 24px;
       }
 
       .hero-text p {
-        font-size: 12px;
+        font-size: 14px;
       }
 
       .hero-btn {
-        padding: 8px 20px;
-        font-size: 12px;
+        padding: 10px 20px;
+        font-size: 13px;
       }
 
       .menu-grid {
         grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 15px 10px;
+        gap: 15px;
+        padding: 20px 5px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
       }
 
       .menu-grid img {
-        height: 250px;
+        height: 220px;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .fiyat {
+        font-size: 16px;
       }
     }
   </style>
@@ -346,6 +456,24 @@
       <ul class="icons"> 
         <li><a href="#"><img src="fotoğraflar/sepet.png" alt="SEPET"></a></li>
         <li><a href="#"><img src="fotoğraflar/3 çizgi.png" alt="TREE LİNE"></a></li>
+      </ul>
+    </div>
+
+    <!-- Hamburger menü -->
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Mobil menü -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#" onclick="closeMobileMenu()">Anasayfa</a></li>
+        <li><a href="#menüburda" onclick="closeMobileMenu()">Menü</a></li>
+        <li><a href="galeri.html" onclick="closeMobileMenu()">Galeri</a></li>
+        <li><a href="rezervasyon.html" onclick="closeMobileMenu()">Rezervasyon</a></li>
+        <li><a href="#footer1" onclick="closeMobileMenu()">İletişim</a></li>
       </ul>
     </div>
   </nav>
@@ -446,6 +574,23 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.remove('active');
+    }
+
+    // Hamburger animasyonu
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
