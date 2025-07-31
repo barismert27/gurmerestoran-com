@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="website icon" href="fotoğraflar/03.jpg" type="png">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');     
+          
+
+
+         .galeri{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       justify-items: center;
+
+
+        
+          
+       }
+       .galeri img{
+      width: 300px;
+      height: 400px;
+      column-gap: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease ;
+
+      
+
+    
+  
+       }
+       .galeri img:hover{
+
+transform: scale(1.2);
+box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.8);
+       }
+    
+       
+
+       @media (max-width:600px) {
+        
+        .galeri{
+       grid-template-columns: repeat(2,1fr);
+       
+
+        }
+        .galeri img{
+
+            width: 200px !important;
+    height: 300px !important;
+column-gap: 1px;
+object-fit: cover;
+margin-top: 20px;
+
+
+
+        }
+       }
+       .üst-baslik {
+
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        
+        padding: 0%;
+        
+       }
+       body{
+
+        background-color: #DCD7C9;
+       }
+.kısametin h1{
+
+font-size: 25px;
+font-family: 'Dancing Script',sans-serif;
+color: #2C3930;
+padding: 40px;
+
+}
+.kısametin p{
+
+font-size: 25px;
+font-family: 'Dancing Script',sans-serif;
+color: #3F4F44;
+}
+    </style>
+</head>
+<body>
+    
+<div class="üst-baslik">
+<h1>GALLERY</h1>
+
+</div>
+
+
+
+     <section class="galeri-bölümü">
+
+        <div class="galeri">
+           <img src="fotoğraflar/Grandma-Nisantasi-e1575031216368.jpg" alt="">
+           <img src="fotoğraflar/Minoa-Cafe-Bookstore-e1575032044.jpg" alt="">
+           <img src="fotoğraflar/MOC-Nisantasi-e1575032437131 (2).jpg" alt="">
+          <img src="fotoğraflar/filbooks-e1575031102852.jpg" alt="">
+          <img src="fotoğraflar/03.jpg" alt="">
+          
+   <div class="kısametin">
+  <h1>Zarafetin ve Lezzetin Buluşma Noktası</h1>
+  <p>
+Her tabakta sanat, her detayda özen...
+Gurme Restoran, sadece yemek değil; seçkin bir yaşam tarzı sunar.
+Şıklıkla bezenmiş atmosferimizde, damak zevkinizi zirveye taşıyacak özel tatlar sizi bekliyor.</p>
+</div>
+</div>      
+</section>
+</body>
+</html>

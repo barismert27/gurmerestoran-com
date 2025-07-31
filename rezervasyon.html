@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervasyon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f4ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .rezervasyon-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    .rezervasyon-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #a01224;
+    }
+
+    .rezervasyon-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .rezerve {
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      font-size: 15px;
+      background-color: #f3f3f3;
+      transition: 0.3s;
+    }
+
+    .rezerve::placeholder {
+      color: #555;
+      opacity: 0.7;
+    }
+
+    .rezerve:focus {
+      border-color: #a01224;
+      background-color: #fff;
+      outline: none;
+    }
+
+    .rezerve-button {
+      background-color: #a01224;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .rezerve-button:hover {
+      background-color: #800d1a;
+    }
+
+    @media (max-width: 500px) {
+      .rezervasyon-container {
+        padding: 20px;
+      }
+
+      .rezerve-button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rezervasyon-container">
+    <h1>Rezervasyon Yapınız</h1>
+    <form class="rezervasyon-form">
+      <input type="text" name="name" class="rezerve" placeholder="İsim">
+      <input type="text" name="sourname" class="rezerve" placeholder="Soyisim">
+      <input type="tel" name="number" class="rezerve" placeholder="Telefon Numarası">
+      <input type="date" name="tarih" class="rezerve">
+      <input type="time" name="zaman" class="rezerve">
+      <input type="number" name="kisiSayisi" class="rezerve" placeholder="Kişi Sayısı">
+      <button type="submit" class="rezerve-button">Rezervasyon Yap</button>
+    </form>
+  </div>
+
+</body>
+</html>
